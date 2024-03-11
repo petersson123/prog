@@ -10,20 +10,21 @@ Försök att sammanfatta vad du har lärt dig.
 # procjekt
 
 ### MÅL
-Kortlek med fyra 1:or, fyra 2:or, ..., fyra 13
-Blanda kortleken
-Dra ett kort ur leken
-Ge spelaren 2 kort
-Ge datorn 1 kort
-Spelaren kan välja hit eller stand
-Datorn väljer hit eller stand
-Vem vinner. Enkel summa. Korten värda 1 - 13.
-spela om pengar
-Kunna spela en gång till.
-Knekt, dam kung värda 10.
-Ess är värt 1 eller 11 enlig regelboken
-kan splitta handen
-Implementera fler regler
+
+1. Kortlek med fyra 1:or, fyra 2:or, ..., fyra 13
+2. Blanda kortleken
+3. Dra ett kort ur leken
+4. Ge spelaren 2 kort
+5. Ge datorn 1 kort
+6. Spelaren kan välja hit eller stand
+7. Datorn väljer hit eller stand
+8. Vem vinner. Enkel summa. Korten värda 1 - 13.
+9. spela om pengar
+10. Kunna spela en gång till.
+11. Knekt, dam kung värda 10.
+12. Ess är värt 1 eller 11 enlig regelboken
+13. kan splitta handen
+14. Implementera fler regler
 
 
 24 03 04
