@@ -1,8 +1,15 @@
-
 import random
 
 # Skapa en kortlek med fyra kort av varje valör (1-13)
 deck = [i for i in range(1, 14)] * 4
+
+# Kartan som motsvarar numeriska värden
+card_names = {
+    1: 'A',
+    11: 'J',
+    12: 'Q',
+    13: 'K'
+}
 
 # Funktion för att blanda kortleken
 def shuffle_deck():
@@ -10,7 +17,8 @@ def shuffle_deck():
 
 # Funktion för att dra ett kort från leken
 def draw_card():
-    return deck.pop()
+    card = deck.pop()
+    return card_names.get(card, card)
 
 # Funktion för att beräkna summan av en hand
 def hand_value(hand):
@@ -19,10 +27,10 @@ def hand_value(hand):
 
     # Räkna varje kort i handen
     for card in hand:
-        if card == 1:  # Ess
+        if card == 'A':  # Ess
             num_aces += 1
             value += 11  # Lägg till 11 för tillfället
-        elif card >= 11 and card <= 13:  # Knekt, Dam, Kung
+        elif card in ['J', 'Q', 'K']:  # Knekt, Dam, Kung
             value += 10
         else:
             value += card
@@ -106,5 +114,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

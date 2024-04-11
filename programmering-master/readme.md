@@ -27,6 +27,11 @@ Försök att sammanfatta vad du har lärt dig.
 14. Implementera fler regler
 
 
+24 04 11
+----------
+### jag har nu uppdatera funktionen draw_card() så att den returnerar korten med värdena "J", "Q", "K" och "E" istället för 11, 12, 13 och 1. och ska nu börja med att implementera ett pengar system som man kan avnända för att beta mot datorn, efter det har jag bara kvar att man ska kunna splitta handen innan jag är helt klar.
+
+
 24 03 04
 ----------
 ### har kollat över koden och hittat var jag ska ändra för att få väderna för knäckt dam kung och ess, även kommit på hur jag ska lösa det genom att googla runt. och ska fixa det på torsdag, efter det ska jag implementera pengar system och efter det är jag klar.
