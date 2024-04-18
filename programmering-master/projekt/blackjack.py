@@ -1,11 +1,14 @@
 import random
 
+# Spelarens pengar
+player_money = 100
+
 # Skapa en kortlek med fyra kort av varje valör (1-13)
 deck = [i for i in range(1, 14)] * 4
 
 # Kartan som motsvarar numeriska värden
 card_names = {
-    1: 'A',
+    1: 'E',
     11: 'J',
     12: 'Q',
     13: 'K'
@@ -27,7 +30,7 @@ def hand_value(hand):
 
     # Räkna varje kort i handen
     for card in hand:
-        if card == 'A':  # Ess
+        if card == 'E':  # Ess
             num_aces += 1
             value += 11  # Lägg till 11 för tillfället
         elif card in ['J', 'Q', 'K']:  # Knekt, Dam, Kung
@@ -42,10 +45,27 @@ def hand_value(hand):
 
     return value
 
+# Funktion för att hantera insatser
+def place_bet():
+    global player_money
+    while True:
+        try:
+            bet = int(input(f"Du har {player_money} kr. Ange din insats: "))
+            if bet < 1 or bet > player_money:
+                print("Ogiltig insats. Försök igen.")
+            else:
+                player_money -= bet
+                return bet
+        except ValueError:
+            print("Ogiltigt värde. Försök igen.")
+
 # Funktion för att spela spelet
 def play_game():
     # Blanda kortleken
     shuffle_deck()
+
+    # Placera insats
+    bet = place_bet()
 
     # Spelarens hand
     player_hand = [draw_card(), draw_card()]
@@ -63,7 +83,7 @@ def play_game():
             print("Dina kort:", player_hand)
             if hand_value(player_hand) > 21:
                 print("Du är tjock! Du förlorar.")
-                return -1
+                return -bet
         elif action == "stand":
             break
         else:
@@ -82,29 +102,31 @@ def play_game():
     print("Datorns summa:", computer_score)
 
     if player_score > 21:
-        return -1
+        return -bet
     elif computer_score > 21:
-        return 1
+        return bet
     elif player_score > computer_score:
-        return 1
+        return bet
     elif player_score < computer_score:
-        return -1
+        return -bet
     else:
         return 0
 
 # Huvudprogrammet
 def main():
+    global player_money
     print("Välkommen till 21-spelet!")
 
-    while True:
+    while player_money > 0:
         result = play_game()
 
-        if result == 1:
-            print("Grattis, du vann!")
-        elif result == -1:
-            print("Tyvärr, du förlorade.")
+        if result > 0:
+            player_money += result
+            print(f"Grattis, du vann! Du har nu {player_money} kr.")
+        elif result < 0:
+            print(f"Tyvärr, du förlorade. Du har nu {player_money} kr.")
         else:
-            print("Det blev oavgjort.")
+            print(f"Det blev oavgjort. Du har fortfarande {player_money} kr.")
 
         play_again = input("Vill du spela igen? (ja/nej) ").lower()
         if play_again != "ja":

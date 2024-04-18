@@ -27,6 +27,10 @@ Försök att sammanfatta vad du har lärt dig.
 14. Implementera fler regler
 
 
+24 04 18
+----------
+### jag har nu lagt till ett pengar system för spelaren där man börjar med 100kr genom att göra en ny funktion, jag har dock inte fixat att man ska vinna lika mycket som du bettar ifall du vinner handen mot datorn, men om du förlorar så försvinner den mengden du spelade för, och så uppdateras dina pengar till nästa omgång. har även gjort att ifall du inte har några pengar kvar abryts sessionen.
+
 24 04 11
 ----------
 ### jag har nu uppdatera funktionen draw_card() så att den returnerar korten med värdena "J", "Q", "K" och "E" istället för 11, 12, 13 och 1. och ska nu börja med att implementera ett pengar system som man kan avnända för att beta mot datorn, efter det har jag bara kvar att man ska kunna splitta handen innan jag är helt klar.
