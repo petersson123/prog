@@ -104,9 +104,9 @@ def play_game():
     if player_score > 21:
         return -bet
     elif computer_score > 21:
-        return bet
+        return bet * 2
     elif player_score > computer_score:
-        return bet
+        return bet * 2
     elif player_score < computer_score:
         return -bet
     else:

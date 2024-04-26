@@ -26,6 +26,11 @@ Försök att sammanfatta vad du har lärt dig.
 13. kan splitta handen
 14. Implementera fler regler
 
+24 04 25
+----------
+### jag jobbat med att felsöka de problem som blev tidigare vecka, och fixat det så att jag vinner pengarna jag bettar, så ifall jag bettar alla mina pengar, 100kr och vinner kommer jag nu ha 200kr.
+
+
 
 24 04 18
 ----------
